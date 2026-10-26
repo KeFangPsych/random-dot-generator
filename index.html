@@ -27,7 +27,7 @@ input[type=color]{width:42px;height:42px;padding:3px;border:1px solid var(--line
 <div class="row"><div><label for="count">Number of dots</label><input id="count" type="number" min="0" max="100000" step="1" value="3200" required></div><div><label for="coverage">Coverage</label><div class="input-wrap"><input class="unit" id="coverage" type="number" min="0" max="1000" step="any" value="11.51" required><span>%</span></div></div></div>
 <input id="amountRange" type="range" min="0" max="10000" step="50" value="3200" aria-label="Adjust number of dots"><p class="hint" id="coverageHint"></p></div>
 <div class="field"><span class="label" id="dotLabel">Dot color</span><div class="bg-row"><input id="dotColor" type="color" value="#000000" aria-labelledby="dotLabel"><input class="hex" id="dotHex" type="text" value="#000000" maxlength="7" autocomplete="off" spellcheck="false" aria-label="Dot color hex code"></div></div>
-<div class="field"><label for="opacity">Dot opacity <span class="value" id="opacityValue">100%</span></label><input id="opacity" type="range" min="5" max="100" step="1" value="100"></div>
+<div class="field"><label for="opacity">Dot opacity <span class="value" id="opacityValue">50%</span></label><input id="opacity" type="range" min="5" max="100" step="1" value="50"></div>
 <div class="rule"></div><h2 class="section-title">03 / Pattern</h2>
 <div class="field"><label class="seed-label" for="seed">Random seed <span>Repeatable patterns</span></label><input id="seed" type="text" value="20261026" maxlength="100" autocomplete="off" spellcheck="false"><p class="hint">Same settings + same seed = same image.</p></div>
 <button class="primary" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M5.2 8a7 7 0 0 1 11.5-2L20 9M4 15l3.3 3A7 7 0 0 0 18.8 16"/></svg>New pattern</button>
@@ -41,7 +41,7 @@ input[type=color]{width:42px;height:42px;padding:3px;border:1px solid var(--line
 'use strict';
 const $ = id => document.getElementById(id);
 const canvas = $('canvas');
-const DEFAULTS = {width:1024,height:768,mode:'count',count:3200,coverage:10,diameter:6,opacity:100,background:'#ffffff',transparent:true,color:'#000000',seed:'20261026'};
+const DEFAULTS = {width:1024,height:768,mode:'count',count:3200,coverage:10,diameter:6,opacity:50,background:'#ffffff',transparent:true,color:'#000000',seed:'20261026'};
 const HEX = /^#[0-9a-f]{6}$/;
 let current = null;
 let pending;
